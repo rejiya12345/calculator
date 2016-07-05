@@ -121,6 +121,18 @@ app.configure('production', function(){
    
 });
 
+app.post('/percent',function(req,res)
+{
+  var a=parseInt(req.body.a);
+  var b= parseInt(req.body.b);
+  var result = (a / b)*100;
+
+  console.log("value of a is "+a);
+   console.log("value of b is "+b);
+   console.log(result);
+   return res.send("result is "+result)
+
+});
 
 
 app.listen(3000, function(){
